@@ -32,6 +32,8 @@ export function GeneratorForm({ options, setOptions, onGenerate, isGenerating }:
               <SelectItem value="hispanic">Hispanic</SelectItem>
               <SelectItem value="malay muslim">Malay Muslim</SelectItem>
               <SelectItem value="arab">Arab</SelectItem>
+              <SelectItem value="indian">Indian</SelectItem>
+              <SelectItem value="british">British</SelectItem>
             </SelectContent>
           </Select>
         </div>
@@ -49,6 +51,8 @@ export function GeneratorForm({ options, setOptions, onGenerate, isGenerating }:
               <SelectItem value="slim">Slim</SelectItem>
               <SelectItem value="athletic">Athletic</SelectItem>
               <SelectItem value="curvy">Curvy</SelectItem>
+              <SelectItem value="skinny">Skinny</SelectItem>
+              <SelectItem value="chubby">Chubby</SelectItem>
             </SelectContent>
           </Select>
         </div>
@@ -86,11 +90,34 @@ export function GeneratorForm({ options, setOptions, onGenerate, isGenerating }:
               <SelectItem value="bohemian">Bohemian</SelectItem>
               <SelectItem value="modest">Modest</SelectItem>
               <SelectItem value="islamic">Islamic</SelectItem>
+              <SelectItem value="corporate">Corporate</SelectItem>
+              <SelectItem value="sporty">Sporty</SelectItem>
             </SelectContent>
           </Select>
         </div>
 
-        <div className="space-y-2 md:col-span-2">
+        <div className="space-y-2">
+          <label className="text-sm font-medium text-white">Background</label>
+          <Select
+            value={options.background}
+            onValueChange={(value) => setOptions({ ...options, background: value })}
+          >
+            <SelectTrigger>
+              <SelectValue />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="random">Random</SelectItem>
+              <SelectItem value="klcc">KLCC</SelectItem>
+              <SelectItem value="london bridge">London Bridge</SelectItem>
+              <SelectItem value="sydney opera">Sydney Opera</SelectItem>
+              <SelectItem value="great wall">Great Wall of China</SelectItem>
+              <SelectItem value="rainforest">Rainforest</SelectItem>
+              <SelectItem value="space station">Space Station</SelectItem>
+            </SelectContent>
+          </Select>
+        </div>
+
+        <div className="space-y-2">
           <label className="text-sm font-medium text-white">Influencer Niche</label>
           <Select
             value={options.niche}
@@ -112,6 +139,9 @@ export function GeneratorForm({ options, setOptions, onGenerate, isGenerating }:
               <SelectItem value="motorsport">Motorsport</SelectItem>
               <SelectItem value="fashion">Fashion</SelectItem>
               <SelectItem value="graduation">Graduation Day</SelectItem>
+              <SelectItem value="relationship">Relationship</SelectItem>
+              <SelectItem value="crypto">Crypto</SelectItem>
+              <SelectItem value="neo-futuristic">Neo-Futuristic</SelectItem>
             </SelectContent>
           </Select>
         </div>

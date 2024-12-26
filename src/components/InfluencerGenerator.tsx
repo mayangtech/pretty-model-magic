@@ -13,6 +13,7 @@ const defaultOptions: GeneratorOptions = {
   height: "average",
   style: "casual",
   niche: "lifestyle",
+  background: "random"
 };
 
 export function InfluencerGenerator({ apiKey }: { apiKey: string }) {

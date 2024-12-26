@@ -4,6 +4,7 @@ export interface GeneratorOptions {
   height: string;
   style: string;
   niche: string;
+  background: string;
 }
 
 export interface GeneratedImage {

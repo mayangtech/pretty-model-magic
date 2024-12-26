@@ -16,7 +16,22 @@ export const generatePrompt = (options: GeneratorOptions) => {
     motorsport: "racing suit, motorsport environment, professional racing setting",
     fashion: "high fashion attire, fashion week setting, runway or photoshoot environment",
     graduation: "graduation gown and cap, university campus setting, celebration atmosphere",
+    relationship: "casual elegant attire, romantic setting, lifestyle blogger pose",
+    crypto: "modern professional attire, tech startup environment, cryptocurrency themed",
+    "neo-futuristic": "futuristic fashion, cyberpunk setting, high-tech environment"
   };
 
-  return `${basePrompt}, ${nichePrompts[options.niche]}, high quality, detailed, 8k`;
+  const backgroundPrompts: Record<string, string> = {
+    random: "",
+    klcc: "KLCC Twin Towers in background, Kuala Lumpur cityscape",
+    "london bridge": "London Bridge and Thames River in background, London cityscape",
+    "sydney opera": "Sydney Opera House in background, Sydney Harbour",
+    "great wall": "Great Wall of China in background, majestic mountain landscape",
+    rainforest: "lush tropical rainforest background, nature environment",
+    "space station": "space station interior, futuristic space environment, Earth view from window"
+  };
+
+  const backgroundPrompt = options.background !== "random" ? `, ${backgroundPrompts[options.background]}` : "";
+  
+  return `${basePrompt}, ${nichePrompts[options.niche]}${backgroundPrompt}, high quality, detailed, 8k`;
 };
