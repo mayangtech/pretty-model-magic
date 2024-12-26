@@ -38,6 +38,9 @@ export function InfluencerGenerator({ apiKey }: { apiKey: string }) {
       tech: "modern office setting, tech gadgets nearby, professional lighting",
       fitness: "fitness attire, gym or outdoor workout setting, athletic pose",
       finance: "professional business attire, office or financial district setting",
+      army: "military uniform, tactical gear, professional military setting",
+      spiritual: "peaceful meditation pose, serene environment, spiritual setting",
+      religious: "modest religious attire, respectful pose, religious setting",
     };
 
     return `${basePrompt}, ${nichePrompts[options.niche]}, high quality, detailed, 8k`;
@@ -67,6 +70,16 @@ export function InfluencerGenerator({ apiKey }: { apiKey: string }) {
 
   return (
     <div className="w-full max-w-4xl mx-auto p-6 space-y-6">
+      {generatedImage && (
+        <Card className="p-6 bg-white mb-6">
+          <img
+            src={generatedImage.imageURL}
+            alt="Generated influencer"
+            className="w-full h-auto rounded-lg shadow-lg"
+          />
+        </Card>
+      )}
+
       <Card className="p-6 bg-gradient-to-r from-gradient-start to-gradient-end bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-10">
         <h2 className="text-2xl font-bold text-center mb-6 text-white">AI Influencer Generator</h2>
         
@@ -85,6 +98,8 @@ export function InfluencerGenerator({ apiKey }: { apiKey: string }) {
                 <SelectItem value="caucasian">Caucasian</SelectItem>
                 <SelectItem value="african">African</SelectItem>
                 <SelectItem value="hispanic">Hispanic</SelectItem>
+                <SelectItem value="malay muslim">Malay Muslim</SelectItem>
+                <SelectItem value="arab">Arab</SelectItem>
               </SelectContent>
             </Select>
           </div>
@@ -137,6 +152,8 @@ export function InfluencerGenerator({ apiKey }: { apiKey: string }) {
                 <SelectItem value="formal">Formal</SelectItem>
                 <SelectItem value="streetwear">Streetwear</SelectItem>
                 <SelectItem value="bohemian">Bohemian</SelectItem>
+                <SelectItem value="modest">Modest</SelectItem>
+                <SelectItem value="islamic">Islamic</SelectItem>
               </SelectContent>
             </Select>
           </div>
@@ -157,6 +174,9 @@ export function InfluencerGenerator({ apiKey }: { apiKey: string }) {
                 <SelectItem value="tech">Tech Review</SelectItem>
                 <SelectItem value="fitness">Fitness</SelectItem>
                 <SelectItem value="finance">Finance</SelectItem>
+                <SelectItem value="army">Army</SelectItem>
+                <SelectItem value="spiritual">Spiritual</SelectItem>
+                <SelectItem value="religious">Religious</SelectItem>
               </SelectContent>
             </Select>
           </div>
@@ -172,20 +192,13 @@ export function InfluencerGenerator({ apiKey }: { apiKey: string }) {
       </Card>
 
       {generatedImage && (
-        <Card className="p-6 bg-white">
-          <img
-            src={generatedImage.imageURL}
-            alt="Generated influencer"
-            className="w-full h-auto rounded-lg shadow-lg"
-          />
-          <Button
-            className="mt-4 w-full bg-gradient-to-r from-gradient-start to-gradient-end text-white"
-            onClick={handleGenerate}
-            disabled={isGenerating}
-          >
-            Generate Another
-          </Button>
-        </Card>
+        <Button
+          className="w-full bg-gradient-to-r from-gradient-start to-gradient-end text-white"
+          onClick={handleGenerate}
+          disabled={isGenerating}
+        >
+          Generate Another
+        </Button>
       )}
     </div>
   );
