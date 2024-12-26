@@ -18,7 +18,11 @@ export const generatePrompt = (options: GeneratorOptions) => {
     graduation: "graduation gown and cap, university campus setting, celebration atmosphere",
     relationship: "casual elegant attire, romantic setting, lifestyle blogger pose",
     crypto: "modern professional attire, tech startup environment, cryptocurrency themed",
-    "neo-futuristic": "futuristic fashion, cyberpunk setting, high-tech environment"
+    "neo-futuristic": "futuristic fashion, cyberpunk setting, high-tech environment",
+    anime: "anime style character, vibrant colors, dynamic pose",
+    cosplayer: "detailed cosplay outfit, convention setting, character-accurate pose",
+    superhero: "superhero costume, action pose, dramatic lighting",
+    AI: "futuristic AI-themed outfit, high-tech environment, digital elements"
   };
 
   const backgroundPrompts: Record<string, string> = {
@@ -28,7 +32,8 @@ export const generatePrompt = (options: GeneratorOptions) => {
     "sydney opera": "Sydney Opera House in background, Sydney Harbour",
     "great wall": "Great Wall of China in background, majestic mountain landscape",
     rainforest: "lush tropical rainforest background, nature environment",
-    "space station": "space station interior, futuristic space environment, Earth view from window"
+    "space station": "space station interior, futuristic space environment, Earth view from window",
+    "egypt pyramid": "Great Pyramids of Giza in background, Egyptian desert landscape"
   };
 
   const backgroundPrompt = options.background !== "random" ? `, ${backgroundPrompts[options.background]}` : "";

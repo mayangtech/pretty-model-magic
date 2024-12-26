@@ -34,6 +34,8 @@ export function GeneratorForm({ options, setOptions, onGenerate, isGenerating }:
               <SelectItem value="arab">Arab</SelectItem>
               <SelectItem value="indian">Indian</SelectItem>
               <SelectItem value="british">British</SelectItem>
+              <SelectItem value="korean">Korean</SelectItem>
+              <SelectItem value="anime">Anime</SelectItem>
             </SelectContent>
           </Select>
         </div>
@@ -92,6 +94,7 @@ export function GeneratorForm({ options, setOptions, onGenerate, isGenerating }:
               <SelectItem value="islamic">Islamic</SelectItem>
               <SelectItem value="corporate">Corporate</SelectItem>
               <SelectItem value="sporty">Sporty</SelectItem>
+              <SelectItem value="anime">Anime</SelectItem>
             </SelectContent>
           </Select>
         </div>
@@ -113,6 +116,7 @@ export function GeneratorForm({ options, setOptions, onGenerate, isGenerating }:
               <SelectItem value="great wall">Great Wall of China</SelectItem>
               <SelectItem value="rainforest">Rainforest</SelectItem>
               <SelectItem value="space station">Space Station</SelectItem>
+              <SelectItem value="egypt pyramid">Egypt Pyramid</SelectItem>
             </SelectContent>
           </Select>
         </div>
@@ -142,6 +146,10 @@ export function GeneratorForm({ options, setOptions, onGenerate, isGenerating }:
               <SelectItem value="relationship">Relationship</SelectItem>
               <SelectItem value="crypto">Crypto</SelectItem>
               <SelectItem value="neo-futuristic">Neo-Futuristic</SelectItem>
+              <SelectItem value="anime">Anime</SelectItem>
+              <SelectItem value="cosplayer">Cosplayer</SelectItem>
+              <SelectItem value="superhero">Superhero</SelectItem>
+              <SelectItem value="AI">AI</SelectItem>
             </SelectContent>
           </Select>
         </div>
