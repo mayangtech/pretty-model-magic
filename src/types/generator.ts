@@ -1,4 +1,5 @@
 export interface GeneratorOptions {
+  gender: string;
   race: string;
   bodyType: string;
   height: string;

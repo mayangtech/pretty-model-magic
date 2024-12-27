@@ -8,6 +8,7 @@ import { generatePrompt } from "@/utils/promptGenerator";
 import { GeneratorOptions, GeneratedImage } from "@/types/generator";
 
 const defaultOptions: GeneratorOptions = {
+  gender: "female",
   race: "asian",
   bodyType: "slim",
   height: "average",

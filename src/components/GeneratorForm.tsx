@@ -17,6 +17,22 @@ export function GeneratorForm({ options, setOptions, onGenerate, isGenerating }:
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
         <div className="space-y-2">
+          <label className="text-sm font-medium text-white">Gender</label>
+          <Select
+            value={options.gender}
+            onValueChange={(value) => setOptions({ ...options, gender: value })}
+          >
+            <SelectTrigger>
+              <SelectValue />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="male">Male</SelectItem>
+              <SelectItem value="female">Female</SelectItem>
+            </SelectContent>
+          </Select>
+        </div>
+
+        <div className="space-y-2">
           <label className="text-sm font-medium text-white">Race</label>
           <Select
             value={options.race}
@@ -153,6 +169,7 @@ export function GeneratorForm({ options, setOptions, onGenerate, isGenerating }:
             </SelectContent>
           </Select>
         </div>
+
       </div>
 
       <Button

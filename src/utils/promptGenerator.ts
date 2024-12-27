@@ -1,7 +1,7 @@
 import { GeneratorOptions } from "@/types/generator";
 
 export const generatePrompt = (options: GeneratorOptions) => {
-  const basePrompt = `beautiful ${options.race} female influencer, ${options.bodyType} body type, ${options.height} height, wearing ${options.style} attire`;
+  const basePrompt = `beautiful ${options.gender} ${options.race} influencer, ${options.bodyType} body type, ${options.height} height, wearing ${options.style} attire`;
   
   const nichePrompts: Record<string, string> = {
     lifestyle: "lifestyle photo, instagram style, natural lighting, urban setting",
